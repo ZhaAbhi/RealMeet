@@ -6,7 +6,7 @@ const AuthScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.logoContainer}>
-        <Image source={RMLOGO} style={styles.logo} />
+        <Image testID='Logo' source={RMLOGO} style={styles.logo} />
         <Text style={styles.logoText}>REAL MEET</Text>
       </View>
     </SafeAreaView>
