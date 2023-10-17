@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, Image, SafeAreaView, StyleSheet} from 'react-native';
-import RMLOGO from '../assets/RM-LOGO.png';
+import RMLOGO from '../../assets/RM-LOGO.png';
 
 const AuthScreen = () => {
   return (
