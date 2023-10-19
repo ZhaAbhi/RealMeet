@@ -12,4 +12,9 @@ describe('AuthScreen', () => {
     const logoText = getByText('REAL MEET');
     expect(logoText).toBeTruthy();
   });
+  it('Should display the svg illustration', () => {
+    const {getByTestId} = render(<AuthScreen />);
+    const svg = getByTestId('svg');
+    expect(svg).toBeTruthy();
+  });
 });
