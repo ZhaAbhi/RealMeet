@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthScreen from './screens/AuthScreen';
+import AuthScreen from './screens/AuthScreen/AuthScreen';
 
 const App = () => {
   return <AuthScreen />;

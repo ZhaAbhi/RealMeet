@@ -2,10 +2,10 @@ import React from 'react';
 import {fireEvent, render} from '@testing-library/react-native';
 import AuthScreen from './AuthScreen';
 
-jest.mock('../assets/RM.svg', () => 'RMLogo');
-jest.mock('../assets/RM-ILLUSTRATION.svg', () => 'RMIllustration');
-jest.mock('../assets/google-icon.svg', () => 'GoogleLogo');
-jest.mock('../components/AppButton', () => 'AppButton');
+jest.mock('../../assets/RM.svg', () => 'RMLogo');
+jest.mock('../../assets/RM-ILLUSTRATION.svg', () => 'RMIllustration');
+jest.mock('../../assets/google-icon.svg', () => 'GoogleLogo');
+jest.mock('../../components/AppButton', () => 'AppButton');
 
 describe('AuthScreen component', () => {
   it('Should have logo', () => {

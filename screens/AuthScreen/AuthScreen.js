@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, Text, SafeAreaView, StyleSheet} from 'react-native';
-import RMLogo from '../assets/RM.svg';
-import RMIllustration from '../assets/RM-ILLUSTRATION.svg';
-import GoogleLogo from '../assets/google-icon.svg';
-import {colors} from '../config/colors';
-import AppButton from '../components/AppButton';
+import RMLogo from '../../assets/RM.svg';
+import RMIllustration from '../../assets/RM-ILLUSTRATION.svg';
+import GoogleLogo from '../../assets/google-icon.svg';
+import {colors} from '../../config/colors';
+import AppButton from '../../components/AppButton';
 
 const AuthScreen = () => {
   return (
