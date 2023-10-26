@@ -20,7 +20,7 @@ const AuthScreen = () => {
         <Text style={styles.des}>Right Mate Around You!</Text>
       </View>
       <AppButton
-       testID = "button"
+        testID="button"
         buttonTitle="Continue with Google"
         buttonIcon={<GoogleLogo height="40" width="40" />}
         buttonStyle={{flexDirection: 'row'}}

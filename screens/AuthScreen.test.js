@@ -1,11 +1,11 @@
 import React from 'react';
-import {render} from '@testing-library/react-native';
+import {fireEvent, render} from '@testing-library/react-native';
 import AuthScreen from './AuthScreen';
 
 jest.mock('../assets/RM.svg', () => 'RMLogo');
 jest.mock('../assets/RM-ILLUSTRATION.svg', () => 'RMIllustration');
-jest.mock('../assets/google-icon.svg', () => 'GoogleLogoMock');
-jest.mock('../components/AppButton', () => 'AppButtonMock');
+jest.mock('../assets/google-icon.svg', () => 'GoogleLogo');
+jest.mock('../components/AppButton', () => 'AppButton');
 
 describe('AuthScreen component', () => {
   it('Should have logo', () => {
@@ -27,8 +27,9 @@ describe('AuthScreen component', () => {
     expect(getByText('Right Mate Around You!')).toBeTruthy();
   });
   it('Should have signup button', () => {
-    const {getByTestId} = render(<AuthScreen />);
+    const {getByTestId, debug} = render(<AuthScreen />);
     const button = getByTestId('button');
-    expect(button).toBeTruthy()
+    expect(button).toHaveProp('buttonTitle', 'Continue with Google');
+    expect(button).toHaveProp('buttonIcon');
   });
 });
