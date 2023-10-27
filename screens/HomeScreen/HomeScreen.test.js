@@ -23,6 +23,10 @@ jest.mock('react-native-maps', () => {
   };
 });
 describe('HomeScreen', () => {
+  it('Should display the text above map', () => {
+    const {getByText} = render(<HomeScreen />);
+    expect(getByText('Find Your Right Mate')).toBeTruthy();
+  });
   it('Should render map', () => {
     const {getByTestId, debug} = render(<HomeScreen />);
     const map = getByTestId('map');

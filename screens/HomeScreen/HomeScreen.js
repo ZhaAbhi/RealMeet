@@ -6,6 +6,9 @@ import MapView from 'react-native-maps';
 const HomeScreen = () => {
   return (
     <View style={{flex: 1}}>
+      <View>
+        <Text>Find Your Right Mate</Text>
+      </View>
       <MapView
         style={{height: '45%', width: '100%'}}
         initialRegion={{
