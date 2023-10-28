@@ -1,4 +1,4 @@
-import {render, cleanup} from '@testing-library/react-native';
+import {render} from '@testing-library/react-native';
 import HomeScreen from './HomeScreen';
 
 jest.mock('react-native-maps', () => {
@@ -30,7 +30,7 @@ jest.mock('react-native-vector-icons/EvilIcons', () => {
   };
   return {
     __esModule: true,
-    default: LocationIconMock
+    default: LocationIconMock,
   };
 });
 describe('HomeScreen', () => {
@@ -45,7 +45,7 @@ describe('HomeScreen', () => {
     expect(location).toBeTruthy();
   });
   it('Should render map', () => {
-    const {getByTestId, debug} = render(<HomeScreen />);
+    const {getByTestId} = render(<HomeScreen />);
     const map = getByTestId('map');
     expect(map).toBeTruthy();
     expect(map).toHaveProp('initialRegion', {
