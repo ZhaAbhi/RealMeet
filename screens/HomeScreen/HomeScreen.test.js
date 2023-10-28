@@ -22,11 +22,27 @@ jest.mock('react-native-maps', () => {
     default: MapViewMock,
   };
 });
+
+jest.mock('react-native-vector-icons/EvilIcons', () => {
+  const {View} = require('react-native');
+  const LocationIconMock = prop => {
+    return <View testID="location">{prop.children}</View>;
+  };
+  return {
+    __esModule: true,
+    default: LocationIconMock
+  };
+});
 describe('HomeScreen', () => {
   it('Should display the input fields', () => {
     const {getByTestId} = render(<HomeScreen />);
     const searchBar = getByTestId('searchBar');
     expect(searchBar).toBeTruthy();
+  });
+  it('Should have location pin to display in search bar', () => {
+    const {getByTestId} = render(<HomeScreen />);
+    const location = getByTestId('location');
+    expect(location).toBeTruthy();
   });
   it('Should render map', () => {
     const {getByTestId, debug} = render(<HomeScreen />);

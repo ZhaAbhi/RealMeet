@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet, TextInput, View} from 'react-native';
 import MapView from 'react-native-maps';
+import LocationPin from 'react-native-vector-icons/EvilIcons';
 
 const HomeScreen = () => {
   return (
@@ -15,11 +16,14 @@ const HomeScreen = () => {
         }}
       />
       <View style={styles.searchContainer}>
-        <TextInput
-          testID="searchBar"
-          placeholder="Find mate around you"
-          style={styles.searchBar}
-        />
+        <View style={styles.searchInputContainer}>
+          <LocationPin name="location" size={30} style={styles.locationIcon} />
+          <TextInput
+            testID="searchBar"
+            placeholder="Find mate around you"
+            style={styles.searchBar}
+          />
+        </View>
       </View>
     </View>
   );
@@ -39,11 +43,19 @@ const styles = StyleSheet.create({
     right: 0,
     padding: 20,
   },
-  searchBar: {
+  searchInputContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
     backgroundColor: 'white',
-    paddingLeft: 15,
-    padding: 10,
     borderRadius: 25,
+  },
+  locationIcon: {
+    padding: 10,
+    fontFamily: 'Roboto-Medium',
+    color: 'grey',
+  },
+  searchBar: {
+    flex: 1,
     color: 'grey',
     fontSize: 16,
     fontFamily: 'Roboto-Medium',
