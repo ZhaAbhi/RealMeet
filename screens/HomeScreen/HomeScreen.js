@@ -3,6 +3,7 @@ import {StyleSheet, TextInput, View} from 'react-native';
 import MapView from 'react-native-maps';
 import LocationPin from 'react-native-vector-icons/EvilIcons';
 import MicroPhone from 'react-native-vector-icons/FontAwesome';
+import {colors} from '../../config/colors';
 
 const HomeScreen = () => {
   return (
@@ -50,7 +51,7 @@ const styles = StyleSheet.create({
   searchInputContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
     borderRadius: 25,
     padding: 10,
   },
@@ -65,8 +66,8 @@ const styles = StyleSheet.create({
     fontFamily: 'Roboto-Medium',
   },
   microPhone: {
-    color: 'grey',
-    marginLeft:5
+    color: colors.black,
+    marginLeft: 5,
   },
 });
 
