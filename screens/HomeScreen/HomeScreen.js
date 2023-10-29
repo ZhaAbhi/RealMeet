@@ -2,6 +2,8 @@ import React from 'react';
 import {StyleSheet, TextInput, View} from 'react-native';
 import MapView from 'react-native-maps';
 import LocationPin from 'react-native-vector-icons/EvilIcons';
+import MicroPhone from 'react-native-vector-icons/FontAwesome';
+import Search from 'react-native-vector-icons/AntDesign';
 
 const HomeScreen = () => {
   return (
@@ -18,11 +20,16 @@ const HomeScreen = () => {
       <View style={styles.searchContainer}>
         <View style={styles.searchInputContainer}>
           <LocationPin name="location" size={30} style={styles.locationIcon} />
+
           <TextInput
             testID="searchBar"
             placeholder="Find mate around you"
             style={styles.searchBar}
           />
+          <View style={styles.ms}>
+            <MicroPhone name="microphone" size={23} style={styles.microPhone} />
+            <Search name="search1" size={23} style={styles.search} />
+          </View>
         </View>
       </View>
     </View>
@@ -59,6 +66,18 @@ const styles = StyleSheet.create({
     color: 'grey',
     fontSize: 16,
     fontFamily: 'Roboto-Medium',
+  },
+  ms: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingRight: 10,
+  },
+  microPhone: {
+    marginRight: 8,
+    color: 'grey',
+  },
+  search: {
+    color: 'grey',
   },
 });
 
