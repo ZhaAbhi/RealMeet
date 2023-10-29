@@ -44,17 +44,6 @@ jest.mock('react-native-vector-icons/FontAwesome', () => {
   };
 });
 
-jest.mock('react-native-vector-icons/AntDesign', () => {
-  const {View} = require('react-native');
-  const SearchIconMock = props => {
-    return <View testID="search">{props.children}</View>;
-  };
-  return {
-    __esModule: true,
-    default: SearchIconMock,
-  };
-});
-
 describe('HomeScreen', () => {
   it('Should display the input fields', () => {
     const {getByTestId} = render(<HomeScreen />);
@@ -70,11 +59,6 @@ describe('HomeScreen', () => {
     const {getByTestId} = render(<HomeScreen />);
     const mic = getByTestId('mic');
     expect(mic).toBeTruthy();
-  });
-  it('Should have search icon in the search bar', () => {
-    const {getByTestId} = render(<HomeScreen />);
-    const search = getByTestId('search');
-    expect(search).toBeTruthy();
   });
   it('Should render map', () => {
     const {getByTestId} = render(<HomeScreen />);

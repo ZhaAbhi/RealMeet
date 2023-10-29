@@ -3,7 +3,6 @@ import {StyleSheet, TextInput, View} from 'react-native';
 import MapView from 'react-native-maps';
 import LocationPin from 'react-native-vector-icons/EvilIcons';
 import MicroPhone from 'react-native-vector-icons/FontAwesome';
-import Search from 'react-native-vector-icons/AntDesign';
 
 const HomeScreen = () => {
   return (
@@ -26,10 +25,8 @@ const HomeScreen = () => {
             placeholder="Find mate around you"
             style={styles.searchBar}
           />
-          <View style={styles.ms}>
-            <MicroPhone name="microphone" size={23} style={styles.microPhone} />
-            <Search name="search1" size={23} style={styles.search} />
-          </View>
+
+          <MicroPhone name="microphone" size={23} style={styles.microPhone} />
         </View>
       </View>
     </View>
@@ -55,9 +52,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'white',
     borderRadius: 25,
+    padding: 10,
   },
   locationIcon: {
-    padding: 10,
     fontFamily: 'Roboto-Medium',
     color: 'grey',
   },
@@ -67,17 +64,9 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: 'Roboto-Medium',
   },
-  ms: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingRight: 10,
-  },
   microPhone: {
-    marginRight: 8,
     color: 'grey',
-  },
-  search: {
-    color: 'grey',
+    marginLeft:5
   },
 });
 
